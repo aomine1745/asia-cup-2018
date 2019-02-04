@@ -1,0 +1,98 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+.container{
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.container div{
+	flex-grow: 1;
+	text-align: center;
+}
+.ball{
+	animation: animateBall 5s linear infinite;
+}
+@keyframes animateBall{
+	0%{
+		transform: translateY(0);
+	}
+	25%{
+		transform: translateY(25px);
+	}
+	50%{
+		transform: translateY(0);
+	}
+	75%{
+		transform: translateY(-25px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+.icon{
+	animation: animateIcon 10s linear infinite;
+}
+.icon.pakistan{
+	animation-delay: -5s;
+}
+@keyframes animateIcon{
+	0%{
+		transform: perspective(500px) rotateY(0deg);
+	}
+	25%{
+		transform: perspective(500px) rotateY(25deg);
+	}
+	50%{
+		transform: perspective(500px) rotateY(0deg);
+	}
+	75%{
+		transform: perspective(500px) rotateY(-25deg);
+	}
+	100%{
+		transform: perspective(500px) rotateY(0deg);
+	}
+}
+h2{
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	color: #fff;
+	margin-top: 40px; 
+	padding: 20px 40px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 80px;
+	background-color: rgba(255, 255, 255, .1);
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+}
+h3{
+	position: fixed;
+	left: 50%;
+	bottom: 5px;
+	transform: translate(-50%);
+	text-align: center;
+	color: #fff;
+	margin-top: 40px; 
+	padding: 10px 20px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 26px;
+	background-color: rgba(0, 0, 0, .5);
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+}
+h3 span{
+	background-color: #fff;
+	color: #262626;
+	font-size: 20px;
+	display: block;
+	margin: 10px 0;
+	padding: 5px;
+}
